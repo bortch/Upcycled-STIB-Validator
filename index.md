@@ -18,4 +18,3 @@ What could be more elegant than a validator to inform me of the tram's arrival i
 
 ![alt text](https://github.com/bortch/Upcycled-STIB-Validator/blob/master/assets/UpcycledStibValidator.gif "Work in progress")
 
-##
