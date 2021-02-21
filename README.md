@@ -17,3 +17,5 @@ Without having to look at my phone every 2 minutes, I wanted to know when to lea
 What could be more elegant than a validator to inform me of the tram's arrival in real time!
 
 ![alt text](https://github.com/bortch/Upcycled-STIB-Validator/blob/master/doc/UpcycledStibValidator.gif "Work in progress")
+
+##
