@@ -190,10 +190,10 @@ cf. StibESP32/test_powerOff/test_powerOff.ino
 
 [tension_negative]: https://github.com/bortch/Upcycled-STIB-Validator/blob/master/assets/tension_negative.png "tension negative DC-DC"
 
-VCC = Collector supply Voltage
-VEE = Emitter supply
-VDD = Drain supply
-VSS = Source supply
+* `VCC` = Collector supply Voltage
+* `VEE` = Emitter supply
+* `VDD` = Drain supply
+* `VSS` = Source supply
 
 ## Pin use of ESP-32S
 
