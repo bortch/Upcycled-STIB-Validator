@@ -1,37 +1,20 @@
-## Welcome to GitHub Pages
+# Upcycled STIB Validator
 
-You can use the [editor on GitHub](https://github.com/bortch/Upcycled-STIB-Validator/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## The challenge
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The initial challenge was to reuse a decommissioned STIB validator and turn it into something useful. 
 
-### Markdown
+![alt text](https://github.com/bortch/Upcycled-STIB-Validator/blob/master/assets/USV_20200320.jpg "Closed validator")
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Big Picture
 
-```markdown
-Syntax highlighted code block
+Most mornings, when I arrive near the tram stop on my way to work, I have to run (uphill) so I don't miss the tram. 
 
-# Header 1
-## Header 2
-### Header 3
+If I had left home in time, 2 or 3 minutes earlier, I wouldn't have had to run. 
 
-- Bulleted
-- List
+Without having to look at my phone every 2 minutes, I wanted to know when to leave the house to make sure I wouldn't miss the tram or have to run. So the idea was simply to know when the trams would arrive at the stop. 
 
-1. Numbered
-2. List
+What could be more elegant than a validator to inform me of the tram's arrival in real time!
 
-**Bold** and _Italic_ and `Code` text
+![alt text](https://github.com/bortch/Upcycled-STIB-Validator/blob/master/assets/UpcycledStibValidator.gif "Work in progress")
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/bortch/Upcycled-STIB-Validator/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
