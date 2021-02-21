@@ -11,13 +11,13 @@ More information about used µControler:
 * Product ref: `RG240128B-BIW-V`
 * LCD
 * STN Negative
-* bleu
+* blue
 * LED
 * PIN: 20
 * ROHS
-* Fabricant: RAYSTAR OPTRONICS
+* Manufacturer: **RAYSTAR OPTRONICS**
 
-[RG240128B-BIW-V product's Details](doc\RG240128B-BIW-V.pdf)
+[RG240128B-BIW-V product's Details](https://github.com/bortch/Upcycled-STIB-Validator/blob/master/assets/RG240128B-BIW-V.pdf)
 
 ### RA6963 Controller Screen pin description
 
@@ -240,3 +240,15 @@ cf. StibESP32/test_powerOff/test_powerOff.ino
 | 22           | 36                | MPR121-SCL | SCL  |
 | 23           | 37                | µSD/MOSI   | 3    |
 | GND          | 38                | -          | -    |
+
+## Schematic
+
+![alt text][schematic]
+
+[schematic]: https://github.com/bortch/Upcycled-STIB-Validator/blob/master/assets/Schematic_Stib32_SPI.png "Stib32 SPI Schematic"
+
+## PCB
+
+![alt text][pcb]
+
+[pcb]: https://github.com/bortch/Upcycled-STIB-Validator/blob/master/assets/Stib32_SPI_PCB.png "Stib32 SPI PCB"
