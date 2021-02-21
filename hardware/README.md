@@ -1,9 +1,9 @@
 # Technical Notes
 
-## Controler
+## µControler
 
-More information about used micro controler:
-https://github.com/nodemcu/nodemcu-devkit-v1.0
+More information about used µControler:
+<https://github.com/nodemcu/nodemcu-devkit-v1.0>
 
 ## Screen
 
@@ -19,7 +19,7 @@ https://github.com/nodemcu/nodemcu-devkit-v1.0
 
 [RG240128B-BIW-V product's Details](doc\RG240128B-BIW-V.pdf)
 
-### RA6963 Controller Screen pinout
+### RA6963 Controller Screen pin description
 
 |  pin  |           | notes                                    |
 | :---: | :-------: | :--------------------------------------- |
@@ -49,8 +49,7 @@ https://github.com/nodemcu/nodemcu-devkit-v1.0
 |  19   | LEDA  | LED back-light Power Supply + (4.05V) |
 |  20   | LEDK  | LED back-light Power Supply - (4.05V) |
 
-
-### ESP-32S to RA6963 wiring 
+### ESP-32S to RA6963 wiring
 
 | ESP-32S GPIO | ESP-32S Board pin | RA6963 raw pin | RA6963 logic | U8glib |
 | :----------- | :---------------- | :------------- | :----------- | :----- |
@@ -86,17 +85,16 @@ RG240128B is a classical `R6963` GLCD.
 
 U8g2 library works with this display.
 
-U8g2 & RA6963: https://github.com/olikraus/u8g2/issues/197
+U8g2 & RA6963: <https://github.com/olikraus/u8g2/issues/197>
 
 [u8g2: U8glib library for monochrome displays, version 2](https://github.com/olikraus/u8g2)
 
 [U8g2 library wiki](https://github.com/olikraus/u8g2/wiki)
 
-
 ### C++ setup & wiring
 
-* RA6963 is a "t6963" controler type.
-* Display is "240x64"
+* RA6963 is a `t6963` controler type.
+* Display is `240x64`
 * 8-bit parallel interface using the 8080 protocol
 
 1. Page buffer
@@ -107,7 +105,7 @@ Use 240 bytes of RAM
 U8G2_T6963_240X64_1_8080(rotation, d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc [, reset]) 
 ```
 
-Only one page of the display memory is stored in the microcontroller RAM. 
+Only one page of the display memory is stored in the microcontroller RAM.
 Use a `firstPage()`/`nextPage()` loop for drawing on the display.
 
 1. Page buffer
@@ -118,7 +116,7 @@ Use 480 bytes  of RAM
 U8G2_T6963_240X64_2_8080(rotation, d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc [, reset]) 
 ```
 
-Same as `1`, but maintains two pages in the microcontroller RAM. 
+Same as `1`, but maintains two pages in the microcontroller RAM.
 This will be up to two times faster than `1`.
 
 1. full framebuffer
@@ -149,7 +147,7 @@ The u8x8 API can be used if there is not even RAM for one page.
 
 #### physical bus selection
 
-Graphics information has to be sent to the display. 
+Graphics information has to be sent to the display.
 This information is received by the display controller through a physical bus (data lines), a communication protocol and a command sequence.
 
 Often a display supports more than one physical bus. You have to select and setup the correct bus.
@@ -162,7 +160,7 @@ Sometimes the bus is just fixed and can not be changed.
 
 #### Digital Line
 
-The display must be connected to the board in order to transfer data from the board to the display. 
+The display must be connected to the board in order to transfer data from the board to the display.
 
 Depending on the selected physical bus, several pins have to be connected to the outputs of the board.
 
@@ -170,9 +168,9 @@ In general, U8g2 can use any outputs of the board. So it does not matter which o
 
 ### Voltage
 
-ESP32 logic is 3.3V
+ESP32 logic is `3.3V`
 
-RA6963 logic is 3.3v or 5V
+RA6963 logic is `3.3v` or `5V`
 
 So it can be used without *Level shifter*
 
@@ -182,21 +180,19 @@ Test of the power save mode from U8G2 is OK
 
 cf. StibESP32/test_powerOff/test_powerOff.ino
 
-### Others Ressources
-
 ### Notes
 
-* Connect `FS` to `GND` for U8glib, font select 8x8. 
-* Also note that you need a `10K` variable pot with wiper at `V0`, one end at `GND` or `VSS` other end at `-20V`. 
+* Connect `FS` to `GND` for U8glib, font select 8x8.
+* Also note that you need a `10K` variable pot with wiper at `V0`, one end at `GND` or `VSS` other end at `-20V`.
   Adjust the varpot so that `V0` has around `-12V` to `-15V`.
 
 ![alt text][tension_negative]
 
-[tension_negative]: ./tension_negative.png "tension negative DC-DC"
+[tension_negative]: https://github.com/bortch/Upcycled-STIB-Validator/blob/master/assets/tension_negative.png "tension negative DC-DC"
 
 VCC = Collector supply Voltage
 VEE = Emitter supply
-VDD = Drain supply 
+VDD = Drain supply
 VSS = Source supply
 
 ## Pin use of ESP-32S
