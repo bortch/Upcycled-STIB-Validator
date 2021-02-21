@@ -4,7 +4,7 @@
 
 The initial challenge was to reuse a decommissioned STIB validator and turn it into something useful. 
 
-![alt text](/Upcycled-STIB-Validator/assets/USV_20200320.jpg "Closed validator")
+![alt text](/assets/USV_20200320.jpg "Closed validator")
 
 ## Big Picture
 
@@ -16,4 +16,4 @@ Without having to look at my phone every 2 minutes, I wanted to know when to lea
 
 What could be more elegant than a validator to inform me of the tram's arrival in real time!
 
-![alt text](/Upcycled-STIB-Validator/assets/UpcycledStibValidator.gif "Work in progress")
+![alt text](/assets/UpcycledStibValidator.gif "Work in progress")
