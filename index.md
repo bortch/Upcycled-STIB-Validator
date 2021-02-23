@@ -1,5 +1,11 @@
 # Upcycled STIB Validator
 
+1. [The Challenge](#the_challenge)
+1. [Big Picture](#big_picture)
+1. [Hardware Note](#hardware_note)
+1. [Schematic](#schematic)
+1. [PCB](#pcb)
+
 ## The challenge
 
 The initial challenge was to reuse a decommissioned STIB validator and turn it into something useful. 
@@ -18,7 +24,7 @@ What could be more elegant than a validator to inform me of the tram's arrival i
 
 ![alt text](assets/UpcycledStibValidator.gif "Work in progress")
 
-## Technical Notes
+## Hardware Notes
 
 ### µControler
 
