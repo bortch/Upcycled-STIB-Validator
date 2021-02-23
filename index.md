@@ -2,6 +2,7 @@
 
 1. [The Challenge](#the_challenge)
 1. [Big Picture](#big_picture)
+1. [Realization](#realization)
 1. [Hardware Note](#hardware_note)
 1. [Schematic](#schematic)
 1. [PCB](#pcb)
