@@ -12,7 +12,7 @@
 
 ## The Challenge
 
-The initial challenge was to reuse a decommissioned STIB validator and turn it into something _useful_ :zany_face:
+The initial challenge was to reuse a decommissioned STIB validator and turn it into something _useful_ :no_mouth:
 
 ![alt text](assets/USV_20200320.jpg "Closed validator")
 
@@ -255,7 +255,15 @@ cf. StibESP32/test_powerOff/test_powerOff.ino
 
 ### Keyboard
 
+The validator has a capacitive keyboard. 
+
+I'm not experienced enough to do reverse engineering, so I decided to redo a capacitive keyboard myself.
+
+The result is not optimal and it could be improved, but it is functional enough.
+
 //TODO: MPR121
+
+<https://github.com/adafruit/Adafruit_MPR121_Library>
 
 ### Global Pin use of the ESP-32S
 
