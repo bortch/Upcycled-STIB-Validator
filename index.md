@@ -24,6 +24,32 @@ What could be more elegant than a validator to inform me of the tram's arrival i
 
 ![alt text](assets/UpcycledStibValidator.gif "Work in progress")
 
+## Realization
+
+This is a work in progress, it will most certainly never be finished.
+
+The information is given as an inspiration and does not pretend to give any functional result.
+
+Some of the information may be incorrect or obsolete.
+
+>I do it for fun, for the challenge and to keep learning...
+
+![alt text](assets/overview.png "overview")
+
+### List of Features
+
+Here's what I would like the machine to do.
+Not all the features have been achieved yet.
+
+- Retrieve data in real time from the [STIB API](https://www.stib-mivb.be/irj/go/km/docs/resource/OpenData/e5ccae47-7a5d-4768-9c97-5d7618a9ff8b.pdf).
+- Display useful information in a not too ugly way.
+- Automatic sleep mode.
+- Using the validator's keyboard to wake up, switch screens, etc
+- Minimum consumption.
+- List the stops that are close to the wifi connection point.
+- Buzz when we have to leave home to be in time.
+- ...
+
 ## Hardware Notes
 
 ### microcontroller
@@ -69,8 +95,8 @@ The board embeds an [ESP-WROOM-32 from Espressif](https://www.espressif.com/site
 |  17  |    VEE    | Negative Power Supply (-20V)             |
 |  18  |    MD2    | H:32 columns; L:40 columns               |
 |  19  |    FS1    | FS : Pin for selection of font           |
-|      |           | H -- Font 6×8 (default)                  |
-|      |           | L -- Font 8×8                            |
+|      |           | H = Font 6×8 (default)                  |
+|      |           | L = Font 8×8                            |
 |  20  |    NC     | no connection                            |
 
 | pin |      | notes                                 |
