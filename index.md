@@ -4,6 +4,9 @@
 1. [Big Picture](#big_picture)
 1. [Realization](#realization)
 1. [Hardware Note](#hardware_note)
+   1. [Microcontroller](#microcontroller)
+   1. [Screen](#screen)
+   1. [Keyboard](#keyboard)
 1. [Schematic](#schematic)
 1. [PCB](#pcb)
 
@@ -33,7 +36,7 @@ The information is given as an inspiration and does not pretend to give any func
 
 Some of the information may be incorrect or obsolete.
 
->I do it for fun, for the challenge and to keep learning... :nerd_face:
+> I do it for fun, for the challenge and to keep learning... :nerd_face:
 
 ![alt text](assets/overview.png "overview")
 
@@ -53,7 +56,7 @@ Not all the features have been achieved yet.
 
 ## Hardware Notes
 
-### microcontroller
+### Microcontroller
 
 As a microcontroller, I used the one I had left: [NodeMCU-32S](https://docs.ai-thinker.com/_media/esp32/docs/nodemcu-32s_product_specification.pdf)
 
@@ -96,8 +99,8 @@ The board embeds an [ESP-WROOM-32 from Espressif](https://www.espressif.com/site
 |  17  |    VEE    | Negative Power Supply (-20V)             |
 |  18  |    MD2    | H:32 columns; L:40 columns               |
 |  19  |    FS1    | FS : Pin for selection of font           |
-|      |           | H = Font 6×8 (default)                  |
-|      |           | L = Font 8×8                            |
+|      |           | H = Font 6×8 (default)                   |
+|      |           | L = Font 8×8                             |
 |  20  |    NC     | no connection                            |
 
 | pin |      | notes                                 |
@@ -154,41 +157,41 @@ U8g2 library works with this display.
 - 8-bit parallel interface using the 8080 protocol
 
 1. Page buffer
-    Use 240 bytes of RAM
+   Use 240 bytes of RAM
 
-    ```C++
-    U8G2_T6963_240X64_1_8080(rotation, d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc [,reset])
-    ```
+   ```C++
+   U8G2_T6963_240X64_1_8080(rotation, d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc [,reset])
+   ```
 
-    Only one page of the display memory is stored in the microcontroller RAM.
-    Use a `firstPage()`/`nextPage()` loop for drawing on the display.
+   Only one page of the display memory is stored in the microcontroller RAM.
+   Use a `firstPage()`/`nextPage()` loop for drawing on the display.
 
 1. Page buffer
 
-    Use 480 bytes of RAM
-    
-    ```C++
-    U8G2_T6963_240X64_2_8080(rotation, d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc [,reset])
-    ```
-    
-    Same as `1`, but maintains two pages in the microcontroller RAM.
-    This will be up to two times faster than `1`.
+   Use 480 bytes of RAM
+
+   ```C++
+   U8G2_T6963_240X64_2_8080(rotation, d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc [,reset])
+   ```
+
+   Same as `1`, but maintains two pages in the microcontroller RAM.
+   This will be up to two times faster than `1`.
 
 1. full framebuffer
 
-    Use 1920 bytes of RAM
-    
-    ```C++
-    U8G2_T6963_240X64_F_8080(rotation, d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc [,reset])
-    ```
-    
-    Keep a copy of the full display frame buffer in the microcontroller RAM.
-    Use `clearBuffer()` to clear the RAM and `sendBuffer()` to transfer the     microcontroller RAM to the display.
-    
-    The full buffer F option can be used only if there is sufficient RAM available in the     microcontroller.
-    
-    Use option 1 or 2 on a microcontroller with a small amount of RAM.
-    The u8x8 API can be used if there is not even RAM for one page.
+   Use 1920 bytes of RAM
+
+   ```C++
+   U8G2_T6963_240X64_F_8080(rotation, d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc [,reset])
+   ```
+
+   Keep a copy of the full display frame buffer in the microcontroller RAM.
+   Use `clearBuffer()` to clear the RAM and `sendBuffer()` to transfer the microcontroller RAM to the display.
+
+   The full buffer F option can be used only if there is sufficient RAM available in the microcontroller.
+
+   Use option 1 or 2 on a microcontroller with a small amount of RAM.
+   The u8x8 API can be used if there is not even RAM for one page.
 
 #### Rotation
 
@@ -202,24 +205,24 @@ U8g2 library works with this display.
 
 #### physical bus selection
 
->Graphics information has to be sent to the display.
-This information is received by the display controller through a physical bus (data lines), a communication protocol and a command sequence.
+> Graphics information has to be sent to the display.
+> This information is received by the display controller through a physical bus (data lines), a communication protocol and a command sequence.
 
->Often a display supports more than one physical bus. You have to select and setup the correct bus.
+> Often a display supports more than one physical bus. You have to select and setup the correct bus.
 
->The physical bus is selected by connecting special pins to GND (Low) or +5V (High), often labeled as BS0, BS1 and BS2.
+> The physical bus is selected by connecting special pins to GND (Low) or +5V (High), often labeled as BS0, BS1 and BS2.
 
->Read the datasheet of the display controller or the manual for instruction on how to setup a specific bus.
+> Read the datasheet of the display controller or the manual for instruction on how to setup a specific bus.
 
->Sometimes the bus is just fixed and can not be changed.
+> Sometimes the bus is just fixed and can not be changed.
 
 ##### Digital Line
 
->The display must be connected to the board in order to transfer data from the board to the display.
+> The display must be connected to the board in order to transfer data from the board to the display.
 
->Depending on the selected physical bus, several pins have to be connected to the outputs of the board.
+> Depending on the selected physical bus, several pins have to be connected to the outputs of the board.
 
->In general, U8g2 can use any outputs of the board. So it does not matter which output pin is used (However it might be clever to select specific pins for hardware accelerated bus communication).
+> In general, U8g2 can use any outputs of the board. So it does not matter which output pin is used (However it might be clever to select specific pins for hardware accelerated bus communication).
 
 #### Voltage
 
