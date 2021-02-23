@@ -12,7 +12,7 @@
 
 ## The Challenge
 
-The initial challenge was to reuse a decommissioned STIB validator and turn it into something _useful_ :no_mouth:
+The initial challenge was to reuse a decommissioned STIB validator and turn it into something _useful_ :smile:
 
 ![alt text](assets/USV_20200320.jpg "Closed validator")
 
@@ -30,7 +30,7 @@ What could be more elegant than a validator to inform me of the tram's arrival i
 
 ## Realization
 
-This is a work in progress, it will most certainly never be finished.
+This is a work in progress, it will most certainly never be finished. :no_mouth:
 
 The information is given as an inspiration and does not pretend to give any functional result.
 
@@ -255,9 +255,9 @@ cf. StibESP32/test_powerOff/test_powerOff.ino
 
 ### Keyboard
 
-The validator has a capacitive keyboard. 
+The validator has a **capacitive touch keyboard**.
 
-I'm not experienced enough to do reverse engineering, so I decided to redo a capacitive keyboard myself.
+I'm not experienced enough to do reverse engineering, so I decided to *redo* a capacitive keyboard myself.
 
 The result is not optimal and it could be improved, but it is functional enough.
 
