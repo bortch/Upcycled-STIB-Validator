@@ -9,7 +9,7 @@
 
 ## The Challenge
 
-The initial challenge was to reuse a decommissioned STIB validator and turn it into something _useful_.
+The initial challenge was to reuse a decommissioned STIB validator and turn it into something _useful_ :zany_face:
 
 ![alt text](assets/USV_20200320.jpg "Closed validator")
 
@@ -21,7 +21,7 @@ If I had left home in time, 2 or 3 minutes earlier, I wouldn't have had to run.
 
 Without having to look at my phone every 2 minutes, I wanted to know when to leave the house to make sure I wouldn't miss the tram or have to run. So the idea was simply to know when the trams would arrive at the stop.
 
-What could be more elegant than a validator to inform me of the tram's arrival in real time!
+What could be more elegant than a validator to inform me of the tram's arrival in real time?
 
 ![alt text](assets/UpcycledStibValidator.gif "Work in progress")
 
@@ -33,7 +33,7 @@ The information is given as an inspiration and does not pretend to give any func
 
 Some of the information may be incorrect or obsolete.
 
->I do it for fun, for the challenge and to keep learning...
+>I do it for fun, for the challenge and to keep learning... :nerd_face:
 
 ![alt text](assets/overview.png "overview")
 
@@ -250,7 +250,11 @@ cf. StibESP32/test_powerOff/test_powerOff.ino
 - `VDD` = Drain supply
 - `VSS` = Source supply
 
-### Pin use of ESP-32S
+### Keyboard
+
+//TODO: MPR121
+
+### Global Pin use of the ESP-32S
 
 | ESP-32S GPIO | ESP-32S Board pin | Usage      | Pin |
 | :----------- | :---------------- | :--------- | :-- |
